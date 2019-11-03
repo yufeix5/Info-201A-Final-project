@@ -20,8 +20,11 @@ Autumn 2019
 
 **1.1 Problem situation**
 
+We are researching Airbnb in New York, 2019. The stakeholders of Airbnb is the hosts who run Airbnb as well as the neighborhood associations who give a lot of regulations and prohibitions to them. Their values and tensions come from financial problems, tourist satisfactions and how the surrounding places are changing. While Airbnb makes many tourists life more convenient, it also causes some unavoidable policy and ethical issues. The hosts may not enforce the local lodging law or may violate the housing contract. The attraction of more tourists may impact the local community in many ways such as environmental pollutions and property regulations. Also, the hosts are able to decide their own guests with discriminations.
 
 **1.2 What is the problem?**
+
+Our problem is to find out the information of Airbnb in New York, 2019 by analyzing datasets, including the price levels, distribution of different types and locations, etc. As Airbnb becomes more popular in the past decades, we also look for some relations between them and some key facts such as safety issues, tourist attractions, natural humanities and sceneries.
 
 **1.3 What does it matter?**
 
@@ -60,7 +63,7 @@ _number of observations:_ 347676
 
 _number of attributes:_ 35
 
-**Description:** This data set contains the complete records of crimes in New York City in 2019, including date, time, crime type, location, race, sex, etc. In this project, we'll mainly analyze the information of location in this data set and how the distribution of Airbnbs may attribute to the public safety in that region.
+**Description:** This data set contains the complete records of crimes in New York City in 2019, including date, time, crime type, location, race, sex, etc. In this project, we'll mainly analyze the information of location in this data set and how the distribution of Airbnb may attribute to the public safety in that region.
 
 
 
@@ -99,7 +102,7 @@ My personal goal is to better understand what factors might make Airbnb popular.
 
 **Shawn Song**
 
-
+I'm mainly a writer in this project and my individual goal is to get a good score on the project while having a basic understanding of Airbnb. I'll get together with my group members in a study lounge or in a library every weekend, talking and discussing any challenge or feedbacks we've met, and help each other solve problems they can't solve in their own part.
 
 
 
