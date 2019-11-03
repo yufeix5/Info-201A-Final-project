@@ -5,7 +5,7 @@
 **Project:** A Data Analysis and Visualization of New York City Airbnb Distribution in 2019.
 
 **Group members:**
-* Klein Wang
+* Klein Wang (kleinwang743@gmail.com)
 * Lexi Xia (Lexiisxia@gmail.com)
 * Lei Lei (leilei09282000@gmail.com)
 * Shawn Song
@@ -65,34 +65,42 @@ _number of attributes:_ 35
 
 
 ### 4.0 Information Visualization
+These two graphics below help us to visualize the popular neighborhood where
+Airbnb housing gathers, and also the popular room type that customer would
+like to choose.
 
+`ALT`![Airbnb:New York City](image/image1.png)
+
+*Figure 1.* This graphic shows the distribution of Airbnb housing each
+neighborhood in New York City, and also the average price for each
+neighborhood group. (*_Source_* : Inside Airbnb) [1]
+
+`ALT`![Listing in NYC](image/image2.png)
+
+*Figure 2.* This graphic also displays the distribution of Airbnb
+housing, but with different room types. (*_Source_* : NYC Data
+Science Academy) [2]
 
 ### 5.0 Team Coordination
-Weekly work time that every group member sit together is every Sunday at 10Am.
-
-**Indivisual Goal**
+**Meeting Time:** Every Sunday morning start from 10 am, and finish around 2-3 pm. Every Wednesday afternoon from 4-5:30 pm.
 
 **Klein Wang**
+My individual goal for the project is learn to apply markdown software in a
+real life problem. My role is to find two visualized graph and make brief
+description for them, and also think and discuss about the main problem we have for our final project. Mostly, we gather in a study lounge or library to work on our final project. For the final project, we discuss the outline and summary for the project first, then we will distribute the work evenly so that we could all finish our job around the same time. When we face challenge, we would ask for each other's help. If we don't know how to solve it, we will use other helping tools like Microsoft Team and websites about our issues.
 
 **Lexi Xia**
-
 My goal is to learn to create an interactive visualization for exploring the data set with appropriate UI dialog controls. I want to learn how to cooperate better with teammates in the group project and get more familiar with Rstudio and Github.
 
 **Lei Lei**
-
+We will communicate weekly both in person and through group chat.
+We will give each other feedback on working together and address communication challenges or work breakdowns.
 My personal goal is to better understand what factors might make Airbnb popular. I also want to learn how to effectively use the knowledge I learned in Information 201, especially on how to create effective data visualization. My role in this group is writer.  
 
 **Shawn Song**
 
-**Commitment to communicate weekly**
-
-We will communicate weekly both in person and through group chat.
 
 
-**Commitment on how you will give each other feedback on working together and
-how you will address communication challenges or work breakdowns.**
-
-We will give each other feedback on working together and address communication challenges or work breakdowns.
 
 
 ### 6.0 Questions for Teaching Team
@@ -100,3 +108,9 @@ We will give each other feedback on working together and address communication c
 Currently no question for the teaching team.
 
 ### 7.0 References
+
+[1] Cox, M. (2019). *_Airbnb:New York City_* Retrieved from
+http://insideairbnb.com/get-the-data.html
+
+[2] Ma, A. (Mar 2, 2016). *_Listing in NYC_* Retrieved from
+https://nycdatascience.com/blog/student-works/how-airbnb-is-in-nyc-interactive-data-visualization-in-r/
