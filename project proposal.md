@@ -8,7 +8,7 @@
 * Klein Wang (kleinwang743@gmail.com)
 * Lexi Xia (Lexiisxia@gmail.com)
 * Lei Lei (leilei09282000@gmail.com)
-* Shawn Song
+* Shawn Song (songshaobo2000@gmail.com)
 
 Info-201: Technical Foundations of Informatics<br>
 The Information School<br>
