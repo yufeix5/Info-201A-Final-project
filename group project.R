@@ -1,8 +1,13 @@
 library(ggplot2)
 library(dplyr)
+library(shiny)
+
+
+
+
 df <- read.csv("AB_NYC_2019.csv", stringsAsFactors = F)
 graph_one <- select(df, neighbourhood_group, room_type)
-data <-table(graph_one$neighbourhood_group,graph_one$room_type)
+data <-table(graph_one$neighbourhood_group, graph_one$room_type)
 barplot(data, beside=TRUE)
 
 p <- ggplot(data = graph_one, aes(x=neighbourhood_group,
