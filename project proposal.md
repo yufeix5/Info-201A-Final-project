@@ -97,7 +97,8 @@ Saurav Sawansukha
 
 **Lei Lei**
 
-Something I learned throughout this project is the use of Shiny and ggplot. Me and my teammates struggled a lot when creating Shiny and inserting graphs. Something I would done differently is to not have people work on their code individually,  because people may have difficulty understanding each other's code. Writing code together can complete the job more efficiently. I am the writer of this project, and I helped with the coding.
+Something I learned throughout this project is the use of Shiny and ggplot. Also, I can see that we are approaching the research question through analyzing data. At this point, I can start analyzing the correlation between the neighborhood group and the population of Airbnb. Me and my teammates struggled a lot when creating Shiny and inserting graphs. I found this frustrating because it did take us a long time, but it is also satisfying when we successfully created the website and every codes run is able to run. Something I would done differently is to not have people work on their code individually, because people may have difficulty understanding each other's code. Also, I found out that communication is a crucial part of this project. because the system of the GitHub need everyone to work together in order to avoid conflict. Writing code together can complete the job more efficiently. I am the writer of this project, and I helped with the coding.
+
 
 **Shawn Song**
 
