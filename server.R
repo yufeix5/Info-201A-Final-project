@@ -1,7 +1,7 @@
 library("dplyr")
 library("plotly")
 library("shiny")
-source("proj_ui.R")
+source("ui.R")
 library("tidyr")
 
 df <- read.csv("AB_NYC_2019.csv", stringsAsFactors = F)
@@ -113,3 +113,4 @@ server <- function(input, output) {
     return(one_neighborhood_chart)
   })
 }
+
