@@ -1,5 +1,8 @@
 # Info-201A-Final-project
 
+## Project Link
+https://lexixia.shinyapps.io/Info-201A-Final-project-1/
+
 ## Project Description:
 
 Our goal for the New York City Airbnb project was to transform the New York City data set and turn it into visuals for future Airbnb owners and customers. Through our visualization, we hope to provide the customers and prospective Airbnb owners some information of the most popular Airbnb in the region, which could also provides some information about how the owners should operate their business in terms of selecting a specific location or selecting a price range, as well as how should customers select a Airbnb when plan their trips.  
