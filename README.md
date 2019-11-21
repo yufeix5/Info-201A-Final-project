@@ -22,3 +22,7 @@ In this project, we will mainly use tools like "Dplyr", "GGPlot2". "Dplyr" will 
 ## Technical Report(Proposal)
 
 https://github.com/yufeix5/Info-201A-Final-project/blob/master/project%20proposal.md
+
+## Project Wiki
+
+
