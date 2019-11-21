@@ -88,10 +88,15 @@ Saurav Sawansukha
 
 
 ### Appendix 1: Data Dictionary
+  The variable “room_type”  represents all kinds of room type including apartment, private room and Shared room in Airbnb. The data type is Nominal data that is measured in types.
+  The variable “num_each_type” represents the number of reserved rooms for each room type. The data type is Numeric data that is measured in #.
+  The variable “neighbourhood” represents the location of Airbnb. The data type is Nominal data that is measured in areas.
 
 ### Appendix 2: Reflections
 
 **Klein Wang**
+
+In this final project, I learned skills such as Shiny App, package like dplyr and ggplot2, and also make my own data frame. I am satisfied when I solve new problems with skills I learned, and frustrated when I cannot solve a problem for too long. In the future, I think I will try to make more opportunities to do project like this, which could let me learn new skills and improve old skills, and also I will do more projects with more deeper thoughts and reflections. After learning so many things about basic principles of being a coder, thinker, and innovator, I am ready to apply those thoughts into more projects. I would like to create more projects which topics are relative to me. I also hope my projects could be seen by more people, let more people know what I care about, and let them also be interested in it.
 
 **Lexi Xia**
 
@@ -101,6 +106,8 @@ Something I learned throughout this project is the use of Shiny and ggplot. Also
 
 
 **Shawn Song**
+
+I mainly developed my writing and coding skill in this project but I contributed less on this project compared to what my teammates did. I contributed part of the project writing and the coding on the bar chart. I found this project very challenging for me since I got frustrated on how my code didn't produce my expected chart using the data frame since the coordinates on the a-axis did not match the neighborhood bars based on my vulnerable coding skill. However, I also feel moving when my teammates are willing to help me solving difficulties and help me accomplishing our goals. Something I would do differently in the future is that I would try to solve problem by myself first but collaborate and discuss our difficulties and frustrations with my teammates rather than spending much more time solving problems alone so that all team members can improve together. This project developed me as a coder on solving difficulties and also a cooperator on team work.
 
 ### Appendix 3: Use of Envisioning Cards
 _Elict stakeholder Views and Values_: This card raised question about what values and views stakeholder may bring to the system and how does it effect the system. It relates to our research question on How does the values of the host impact the user of Airbnb.
