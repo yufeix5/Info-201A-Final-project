@@ -25,4 +25,5 @@ https://github.com/yufeix5/Info-201A-Final-project/blob/master/project%20proposa
 
 ## Project Wiki
 
+https://github.com/yufeix5/Info-201A-Final-project/wiki
 
