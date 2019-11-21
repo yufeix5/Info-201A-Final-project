@@ -19,6 +19,11 @@ Our goal for the New York City Airbnb project was to transform the New York City
 
 In this project, we will mainly use tools like "Dplyr", "GGPlot2". "Dplyr" will be used to do data wrangling and selecting the data we want from the dataset. "GGplot" will be used to do Data visualizations such as creat graphs and maps.
 
-## Project Proposal
+## Technical Report(Proposal)
 
 https://github.com/yufeix5/Info-201A-Final-project/blob/master/project%20proposal.md
+
+## Project Wiki
+
+https://github.com/yufeix5/Info-201A-Final-project/wiki
+
