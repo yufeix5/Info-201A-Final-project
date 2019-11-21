@@ -76,6 +76,7 @@ So far, we finished the first graph. For that graph, we used room type and neigh
 
 
 ### 5.0 Technical description of Shiny application
+The dataset we mainly use is the New York City Airbnb dataset. To make our plot, we will manipulate the data to make it easier to work. And this process will be done by package "dplyr" to select specific rows and columns, combine datasets, and filter the data. The major packages we use to do visualization are "Plotly" and "ggplot2". By using these functions, we will creat a bar plot and pie chart to display the associations of room types and neighborhoods in regard to Airbnb numbers in New York City. We will also create a leaflet that shows the distribution of NYC Airbnbs. We use "shiny" to creat our shiny app and hosts the project website. The app will be constructed by five pages including three major parts: the first tab page will be a brief introduction to our project; the second, third, and fourth pages will be three different aspects of insights of our datasets; the last page will be analysis and summary of our project. The data manipulation will be done and stored in the file "server.R", and the UI and structure of pages will be written in the ui.R.
 
 
 
@@ -99,6 +100,8 @@ Saurav Sawansukha
 In this final project, I learned skills such as Shiny App, package like dplyr and ggplot2, and also make my own data frame. I am satisfied when I solve new problems with skills I learned, and frustrated when I cannot solve a problem for too long. In the future, I think I will try to make more opportunities to do project like this, which could let me learn new skills and improve old skills, and also I will do more projects with more deeper thoughts and reflections. After learning so many things about basic principles of being a coder, thinker, and innovator, I am ready to apply those thoughts into more projects. I would like to create more projects which topics are relative to me. I also hope my projects could be seen by more people, let more people know what I care about, and let them also be interested in it.
 
 **Lexi Xia**
+
+The most important skill I learned doing this project is to cooperate with my teammates. The project itself could be complex sometimes, but once we divide it into small tasks, it becomes approachable. I was mainly doing the coding tasks in this project, so I learned a lot of manipulating datasets, data visualization, and shiny application. I believe these skills will be very beneficial for me in the future. By working in a group, I also realized that communication is very important for the project management. A meeting with group members and working together could resolve a lot of problems when we get stuck in some tasks. In this class, I learned a lot about data and how technologies could have impacts on people. And I am willing to pursue an Informatics major in the future.
 
 **Lei Lei**
 

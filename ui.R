@@ -3,7 +3,7 @@ library("plotly")
 
 intro_page <- tabPanel(
   "Introduction of Project",
-  titlePanel(title=img(src="airbnb.png", width = 500, height = 300)),
+  titlePanel(title = img(src = "airbnb.png", width = 500, height = 300)),
   h1(class = "center", "What's Our Goal?"),
   h4(class = "center_text", "Our goal for the New York City Airbnb project was
      to transform the New York City data set and turn it into visuals for future
@@ -11,19 +11,19 @@ intro_page <- tabPanel(
      the customers and prospective Airbnb owners some information of the most
      popular Airbnb in the region, which could also provides some information
      about how the owners should operate their business in terms of selecting
-     a specific location or selecting a price range, as well as how should customers
-     select a Airbnb when plan their trips."),
+     a specific location or selecting a price range, as well as how should
+     customers select a Airbnb when plan their trips."),
   h1(class = "center", "Data set that we use:"),
-  h4(class = "center_text", "To answer the question, we mainly use the New York
-     City Airbnb data set, and the additional source including crime data in different
-     neighborhood from the NYPD complaints data set."),
+  h4(class = "center_text", "To answer the question, we mainly use the
+    New York City Airbnb data set, and the additional source including
+    crime data in different neighborhood from the NYPD complaints data set."),
   h3(class = "center", "This project is created by:"),
   tags$li(class = "center_text", "Yufei Xia"),
   tags$li(class = "center_text", "Klein Wang"),
   tags$li(class = "center_text", "Lei Lei"),
-  tags$li(class = "center_text", "Shawn Song")
+  tags$li(class = "center_text", "Shawn Song"),
+  helpText(a("Link to more information on Github repository"), href = "https://github.com/yufeix5/Info-201A-Final-project") 
 )
-
 
 bar_chart_page <- tabPanel(
   "Airbnb Room Type",
@@ -37,13 +37,21 @@ bar_chart_page <- tabPanel(
         choice = c("Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island")
       )
     ),
-    
+
     mainPanel(
       id = "main_bar",
       br(),
       plotlyOutput("bar_plot"),
       br(),
-      p("This is an interactive bar chart. To be continued.")
+      p("This bar graph shows different room types in a specific neighborhood,
+        including entire house/apt, private room, and shared room. This graph
+        can be used to compare the amount of each type of rooms in one neighborhood.
+        It can not be used to compare the amount of rooms among all neighborhoods.
+        To eliminate the problem, we created the next pie chart to show the total
+        amount of Airbnb rooms in each neighborhood."),
+      plotOutput("pie_chart"),
+      br(),
+      p("<pie chart description>")
     )
   )
 )
@@ -58,7 +66,7 @@ conclusion_page <- tabPanel(
   "Summary",
   titlePanel("Conclusion of project"),
   h3("The Relationship Between New york City Airbnb Distribution and Room Type
-     and How Should Owners Marketing"),
+    and How Should Owners Marketing"),
   p("<not finished yet, discription of first bar graph>"),
   
   h3("Using Price Range to See Airbnb Distribution"),
