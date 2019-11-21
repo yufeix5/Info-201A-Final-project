@@ -22,7 +22,12 @@ intro_page <- tabPanel(
   tags$li(class = "center_text", "Klein Wang"),
   tags$li(class = "center_text", "Lei Lei"),
   tags$li(class = "center_text", "Shawn Song"),
-  helpText(a("Link to more information on Github repository"), href = "https://github.com/yufeix5/Info-201A-Final-project") 
+  h3("For more information about the project"),
+  tags$div(class = "submit",
+           tags$a(href = "https://github.com/yufeix5/Info-201A-Final-project/wiki",
+                  "Project Wiki",
+                  target = "_blank")
+  )
 )
 
 bar_chart_page <- tabPanel(
@@ -59,7 +64,8 @@ bar_chart_page <- tabPanel(
 # leaflet_page: an interactive leaflet that can show the location of NYC Airbnbs
 # and could be modified with different price
 leaflet_page <- tabPanel(
-  "Distribution & price range"
+  "Distribution & price range",
+  h3("<A leafleat display the locations of Airbnb in NYC>")
 )
 
 conclusion_page <- tabPanel(
