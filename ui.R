@@ -94,6 +94,26 @@ map_page <- tabPanel(
   )
 )
 
+heat_map_page <- tabPanel(
+  "Heat Map",
+  titlePanel("select between 1) heat map of price 2) heat map of reviews"),
+  sidebarLayout(
+    sidebarPanel(
+      id = "heat_map",
+      selectInput(
+        inputId = "heat",
+        label = "Heat Map",
+        choices = c("1", "2")
+      )
+    ),
+    
+    mainPanel(
+      id = "heatmap",
+      plotOutput("heatmap"),
+    )
+  )
+)
+
 conclusion_page <- tabPanel(
   "Summary",
   titlePanel("Conclusion of project"),
@@ -115,6 +135,7 @@ ui <- tagList(
     intro_page,
     bar_chart_page,
     map_page,
+    heat_map_page,
     conclusion_page
   )
 )

@@ -6,8 +6,40 @@ library("tidyr")
 library("ggplot2")
 library("viridis")
 source("ui.R")
+library("tidyverse")
+library(devtools)
+
+library("tigris")
+library("sp")
+library("ggmap")
+library("maptools")
+library("broom")
+library("httr")
+library("rgdal")
+library("ggmap")
 
 df <- read.csv("AB_NYC_2019.csv", stringsAsFactors = F)
+
+#heatmap for price 
+filter_price <- df %>%
+  select(price, latitude, longitude, number_of_reviews)
+register_google()
+
+nyc_map <- get_stamenmap(bbox = c(left = -74.1, bottom = 40.6, right = -73.8, top = 40.91), maptype = "terrain")
+
+price_heatmap <- ggmap(nyc_map) + 
+  geom_density2d(data = filter_price, aes(fill = price, x = longitude, y = latitude,), size = 0.3) + 
+  stat_density2d(data = filter_price, aes(x = longitude, y = latitude, fill = ..level.., alpha = ..level..), size = 0.01, bins = 16, geom = "polygon") + 
+  scale_fill_gradient(low = "green", high = "red") + 
+  scale_alpha(range = c(0, 0.3), guide = FALSE)
+
+review_heatmap <- ggmap(nyc_map) + 
+  geom_density2d(data = filter_price, aes(fill = number_of_reviews, x = longitude, y = latitude,), size = 0.3) + 
+  stat_density2d(data = filter_price, aes(x = longitude, y = latitude, fill = ..level.., alpha = ..level..), size = 0.01, bins = 16, geom = "polygon") + 
+  scale_fill_gradient(low = "green", high = "red") + 
+  scale_alpha(range = c(0, 0.3), guide = FALSE)
+
+
 
 # The price ranges for Brooklyn
 brooklyn <- df %>%
@@ -200,4 +232,18 @@ server <- function(input, output) {
     
   })
   
+  output$heatmap <- renderPlot({
+    if(input$heat == "1") {
+      heatmap <- price_heatmap
+    } else {
+      heatmap <- review_heatmap
+    }
+    return(heatmap)
+  }
+    
+  )
+  
 }
+
+
+
