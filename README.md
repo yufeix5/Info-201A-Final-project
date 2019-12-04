@@ -13,7 +13,6 @@ Our goal for the New York City Airbnb project was to transform the New York City
 
 * Know where and which type of Airbnb is the most popular in New York.
 
-* Considering the public safety factor, how does this relate to choosing an Airbnb location.
 
 ## Tools that we use:
 
