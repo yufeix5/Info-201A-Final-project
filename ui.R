@@ -1,5 +1,6 @@
 library("shiny")
 library("plotly")
+library("leaflet")
 
 intro_page <- tabPanel(
   "Introduction of Project",
@@ -42,7 +43,7 @@ bar_chart_page <- tabPanel(
         choice = c("Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island")
       )
     ),
-
+    
     mainPanel(
       id = "main_bar",
       br(),
@@ -63,9 +64,34 @@ bar_chart_page <- tabPanel(
 
 # leaflet_page: an interactive leaflet that can show the location of NYC Airbnbs
 # and could be modified with different price
-leaflet_page <- tabPanel(
-  "Distribution & price range",
-  h3("<A leafleat display the locations of Airbnb in NYC>")
+map_page <- tabPanel(
+  "Map of Airbnbs",
+  titlePanel("Geographic Distribution of Airbnb"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      id = "sidebar_map",
+      checkboxGroupInput(
+        "price_range",
+        label = h3("price_range"),
+        choices = list("Below $100", "$100 ~ $150", "$150 ~ $200",
+                       "$200 ~ $250", "$250 ~ $300", "Above $300"),
+        selected = list("Below $100", "$100 ~ $150", "$150 ~ $200",
+                        "$200 ~ $250", "$250 ~ $300", "Above $300")
+      )
+    ),
+    mainPanel(
+      id = "main_map",
+      br(),
+      leafletOutput("map"),
+      br(),
+      p("This interactive map allows us to view the geographic distribution of
+        Airbnbs in the New York area. The color-coded legend and the
+        widget on the left allow us to sort the points on the map by price range
+        for a visual representation of the what areas tend to have more Airbnbs
+        in different price range.")
+    )
+  )
 )
 
 conclusion_page <- tabPanel(
@@ -88,7 +114,7 @@ ui <- tagList(
     "New York City Airbnb Analysis",
     intro_page,
     bar_chart_page,
-    leaflet_page,
+    map_page,
     conclusion_page
   )
 )

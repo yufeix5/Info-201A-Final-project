@@ -5,8 +5,8 @@ account: lexixia
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1498682
-bundleId: 2606375
+bundleId: 2633315
 url: https://lexixia.shinyapps.io/Info-201A-Final-project-1/
-when: 1574321303.50709
+when: 1575316083.47337
 asMultiple: FALSE
 asStatic: FALSE

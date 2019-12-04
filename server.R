@@ -1,9 +1,11 @@
 library("dplyr")
 library("plotly")
 library("shiny")
-source("ui.R")
+library("leaflet")
 library("tidyr")
 library("ggplot2")
+library("viridis")
+source("ui.R")
 
 df <- read.csv("AB_NYC_2019.csv", stringsAsFactors = F)
 
@@ -82,7 +84,7 @@ colnames(neighborhood_df) <- c(
 
 # dataframe for pie chart
 neighborhood_df$total <- rowSums(neighborhood_df[,
-  c("Entire house/apt", "Private room", "Shared room")], na.rm = T)
+                                                 c("Entire house/apt", "Private room", "Shared room")], na.rm = T)
 
 # Server
 
@@ -106,9 +108,9 @@ server <- function(input, output) {
       x = ~types, y = ~count,
       hoverinfo = "text",
       text = ~ paste(paste("Room types:", types),
-        paste("Number of Airbnbs:", count),
-        sep = "<br />"
-        )
+                     paste("Number of Airbnbs:", count),
+                     sep = "<br />"
+      )
     ) %>%
       layout(
         title = "Number of Airbnbs of each room types",
@@ -118,21 +120,84 @@ server <- function(input, output) {
       )
     return(one_neighborhood_chart)
   })
-
+  
   #Second chart in page one
   output$pie_chart <- renderPlot({
     p <- ggplot(neighborhood_df, aes(x = "", y = total, fill = neighborhood),
                 position = position_stack(vjust = 0.3)) +
       geom_bar(stat = "identity", color = "black")
     p <- p + coord_polar(theta = "y") + theme(axis.ticks = element_blank(),
-                                           axis.text.y = element_blank(),
-                                           axis.text.x = element_text(
-                                             colour = "black"),
-                                           axis.title = element_blank())
+                                              axis.text.y = element_blank(),
+                                              axis.text.x = element_text(
+                                                colour = "black"),
+                                              axis.title = element_blank())
     p <- p + scale_y_continuous(breaks = cumsum(neighborhood_df$total)
                                 - neighborhood_df$total / 2,
                                 labels = neighborhood_df$neighborhood)
     return(p)
   })
+  
+  
+  # leaflet
+  
+  output$map <- renderLeaflet({
+    df_price <- df %>%
+      filter(reviews_per_month >= 2, minimum_nights <= 7) %>%
+      select(latitude, longitude, price, name, room_type, minimum_nights)
+    
+    if (!("Below $100" %in% input$price_range)) {
+      df_price <- df_price %>%
+        filter(price > 100)
+    }
+    
+    if (!("$100 ~ $150" %in% input$price_range)) {
+      df_price <- df_price %>%
+        filter(price > 150 | price <= 100)
+    }
+    
+    if (!("$150 ~ $200" %in% input$price_range)) {
+      df_price <- df_price %>%
+        filter(price > 200 | price <= 150)
+    }
+    
+    if (!("$200 ~ $250" %in% input$price_range)) {
+      df_price <- df_price %>%
+        filter(price > 250 | price <= 200)
+    }
+    
+    if (!("$250 ~ $300" %in% input$price_range)) {
+      df_price <- df_price %>%
+        filter(price > 300 | price <= 250)
+    }
+    
+    if (!("Above $300" %in% input$price_range)) {
+      df_price <- df_price %>%
+        filter(price <= 300)
+    }
+    
+    wardpal <- colorFactor(viridis(6), input$price_range)
+    map_of_vegas <- leaflet(data = df_price) %>%
+      addProviderTiles("CartoDB.Positron") %>%
+      setView(lng = -73.935242, lat = 40.730610, zoom = 10.5) %>%
+      addCircleMarkers(lng = ~longitude, 
+                       lat = ~latitude, 
+                       radius = 2, 
+                       fillColor = ~wardpal(input$price_range),
+                       stroke=FALSE,
+                       fillOpacity = 0.8,
+                       popup = paste("Name:", df_price$name, "<br>",
+                                     "Type:", df_price$room_type, "<br>",
+                                     "Minimum nights:", df_price$minimum_nights) 
+                       )%>%
+      addLegend(
+        position = "bottomright",
+        title = "Airbnbs in New York City",
+        pal = wardpal,
+        values = ~input$price_range,
+        opacity = 1
+      )
+    map_of_vegas
+    
+  })
+  
 }
-
